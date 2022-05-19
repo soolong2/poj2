@@ -7,7 +7,7 @@
 
 import UIKit
 
-class therdViewController: UIViewController,UINavigationControllerDelegate {
+class SecondViewController: UIViewController,UINavigationControllerDelegate {
     
     lazy var imagePicker: UIImagePickerController = {
         let picker: UIImagePickerController = UIImagePickerController()
@@ -37,6 +37,8 @@ class therdViewController: UIViewController,UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        editingButton.isEnabled = false
+        
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
         tapGesture.delegate = self
         
@@ -46,7 +48,7 @@ class therdViewController: UIViewController,UINavigationControllerDelegate {
     
     
 }
-extension therdViewController: UIImagePickerControllerDelegate {
+extension SecondViewController: UIImagePickerControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -58,13 +60,13 @@ extension therdViewController: UIImagePickerControllerDelegate {
     }
     
 }
-extension therdViewController: UIGestureRecognizerDelegate {
+extension SecondViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         self.view.endEditing(true)
         return true
     }
 }
-extension therdViewController: UITextFieldDelegate{
+extension SecondViewController: UITextFieldDelegate{
     
     
     func  textFieldDidBeginEditing(_ textField: UITextField) {

@@ -62,6 +62,7 @@
                             <constraint firstItem="lmB-fj-eox" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="BjL-AN-UF7"/>
                             <constraint firstItem="bud-OB-M6W" firstAttribute="top" secondItem="1oJ-gc-T6e" secondAttribute="bottom" constant="41" id="Fdc-gf-c21"/>
                             <constraint firstItem="bud-OB-M6W" firstAttribute="leading" secondItem="1oJ-gc-T6e" secondAttribute="leading" id="HAm-CS-ugt"/>
+                            <constraint firstItem="kci-5b-Hl5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JzO-m0-tn7"/>
                             <constraint firstItem="kci-5b-Hl5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ToR-El-WPo"/>
                             <constraint firstItem="bud-OB-M6W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="bIK-q3-7WC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1oJ-gc-T6e" secondAttribute="trailing" constant="100" id="fcn-Je-eiE"/>
@@ -79,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="1186.9565217391305" y="79.6875"/>
         </scene>
-        <!--Therd View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="eY1-vr-cYh">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="teZ-Ue-yd9" customClass="therdViewController" customModule="poj2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="teZ-Ue-yd9" customClass="SecondViewController" customModule="poj2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Evb-hB-ybD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,10 +215,10 @@
             </objects>
             <point key="canvasLocation" x="2889.8550724637685" y="79.6875"/>
         </scene>
-        <!--Four View Controller-->
+        <!--Third View Controller-->
         <scene sceneID="6bV-wn-tZr">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="PFr-WW-gHW" customClass="FourViewController" customModule="poj2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="PFr-WW-gHW" customClass="ThirdViewController" customModule="poj2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rkf-Vx-rgu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,7 +255,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="취소"/>
                                         <connections>
-                                            <action selector="dismissModal23" destination="PFr-WW-gHW" eventType="touchUpInside" id="ISk-8v-7r9"/>
+                                            <action selector="dismissModalCancelButton" destination="PFr-WW-gHW" eventType="touchUpInside" id="ISk-8v-7r9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLM-rN-enV">
@@ -262,7 +263,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="이전"/>
                                         <connections>
-                                            <action selector="dismassModal1:" destination="PFr-WW-gHW" eventType="touchUpInside" id="LWm-RB-AWA"/>
+                                            <action selector="dismassModalBackButton:" destination="PFr-WW-gHW" eventType="touchUpInside" id="TgL-tH-CJ0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJg-Yz-p1I">
@@ -270,7 +271,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="가입"/>
                                         <connections>
-                                            <action selector="dismissModal2" destination="PFr-WW-gHW" eventType="touchUpInside" id="ZQE-KD-FsD"/>
+                                            <action selector="dismissModalJoinButton" destination="PFr-WW-gHW" eventType="touchUpInside" id="ZQE-KD-FsD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -322,7 +323,7 @@
                     <connections>
                         <outlet property="dataLable" destination="f6A-d1-58v" id="1eU-6M-c5h"/>
                         <outlet property="dataPicker" destination="RGX-EB-DEs" id="YM6-Tk-9T9"/>
-                        <outlet property="gaButton" destination="yJg-Yz-p1I" id="DXg-xM-J2i"/>
+                        <outlet property="joinButton" destination="yJg-Yz-p1I" id="DXg-xM-J2i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPm-cA-Efb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
