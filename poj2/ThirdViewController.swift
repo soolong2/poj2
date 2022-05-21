@@ -12,8 +12,8 @@ class ThirdViewController: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var dataPicker: UIDatePicker!
     @IBOutlet weak var dataLable: UILabel!
     @IBOutlet weak var joinButton: UIButton!
-    @IBAction func dismassModalBackButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func popBackButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     let dataFormat: DateFormatter = { let formaat: DateFormatter = DateFormatter()
         formaat.dateStyle = .medium
@@ -28,15 +28,13 @@ class ThirdViewController: UIViewController,UIGestureRecognizerDelegate {
     }
     @IBAction func dismissModalJoinButton(){
         
-        UesrInformation.shared.ID
         
-        UesrInformation.shared.pas
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func dismissModalCancelButton(){
         UesrInformation.shared.ID = ""
         UesrInformation.shared.pas = ""
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

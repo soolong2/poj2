@@ -12,5 +12,5 @@ class UesrInformation {
     
     var ID: String?
     var pas: String?
-    var passam:String?
+  
 }

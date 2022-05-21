@@ -70,11 +70,13 @@ extension SecondViewController: UITextFieldDelegate{
     
     
     func  textFieldDidBeginEditing(_ textField: UITextField) {
-        editingButton.isEnabled = false
+        
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if pasText.text == pasTextSam.text {
+        if pasText.text == pasTextSam.text && idText.text != "" && pasText.text != "" {
             editingButton.isEnabled = true
+        } else {
+            editingButton.isEnabled = false
         }
     }
     
