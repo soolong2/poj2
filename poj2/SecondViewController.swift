@@ -19,25 +19,20 @@ class SecondViewController: UIViewController,UINavigationControllerDelegate {
     
     @IBOutlet weak var editingButton: UIButton!
     @IBOutlet weak var pasText: UITextField!
-    
     @IBOutlet weak var pasTextSam: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
     
-    
-    @IBAction func touchButton(_ sender: UIButton) {
-        UesrInformation.shared.ID = idText.text
-        UesrInformation.shared.pas = pasText.text
-    }
     @IBAction func dismissModal() {
         self.dismiss(animated: true, completion: nil)
     }
-    @IBOutlet weak var imageView: UIImageView!
+    
     @IBAction func touchUpSelctImageButton(_ sender: UIButton) {
         self.present(self.imagePicker, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        editingButton.isEnabled = false
+       
         
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
         tapGesture.delegate = self
@@ -46,6 +41,10 @@ class SecondViewController: UIViewController,UINavigationControllerDelegate {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func touchButton(_ sender: UIButton) {
+        UesrInformation.shared.ID = idText.text
+        UesrInformation.shared.pas = pasText.text
+    }
     
 }
 extension SecondViewController: UIImagePickerControllerDelegate {
@@ -67,11 +66,6 @@ extension SecondViewController: UIGestureRecognizerDelegate {
     }
 }
 extension SecondViewController: UITextFieldDelegate{
-    
-    
-    func  textFieldDidBeginEditing(_ textField: UITextField) {
-        
-    }
     func textFieldDidEndEditing(_ textField: UITextField) {
         if pasText.text == pasTextSam.text && idText.text != "" && pasText.text != "" {
             editingButton.isEnabled = true
@@ -79,6 +73,5 @@ extension SecondViewController: UITextFieldDelegate{
             editingButton.isEnabled = false
         }
     }
-    
 }
 
