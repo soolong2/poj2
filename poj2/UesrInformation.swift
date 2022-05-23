@@ -10,7 +10,7 @@ import Foundation
 class UesrInformation {
     static let shared: UesrInformation = UesrInformation()
     
-    var ID: String?
-    var pas: String?
+    var iD: String?
+    var password: String?
   
 }

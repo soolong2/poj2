@@ -27,22 +27,22 @@ class ThirdViewController: UIViewController,UIGestureRecognizerDelegate {
     @IBAction func dismissModalJoinButton(){
         ////self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         // 모달은 하나밖에없어서  바로 처음으로 돌아가야하는데 시뮬레이터 돌려보니 모달에서 다시 모달창으로 열리더라(네비게이터 생성해서 쇼로 이어줬음
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        //self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func dismissModalCancelButton(){
-        UesrInformation.shared.ID = ""
-        UesrInformation.shared.pas = ""
+        UesrInformation.shared.iD = ""
+        UesrInformation.shared.password = ""
         //self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         // 모달은 하나밖에없어서  바로 처음으로 돌아가야하는데 시뮬레이터 돌려보니 모달에서 다시 모달창으로 열리더라(네비게이터 생성해서 쇼로 이어줬음)
         // 정상적이면 self.presntingViewControll....이코드는 안씀
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        //self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func popBackButton(_ sender: Any) {
-        //self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
         //여기서 네비게이션이 맞다면 이코드를 써서 이전화면으로 넘어가야하는데 모달로열여서 dismiss로 해놨어
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

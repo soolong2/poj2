@@ -24,8 +24,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.idText.text = UesrInformation.shared.ID
-        self.pasText.text = UesrInformation.shared.pas
+        self.idText.text = UesrInformation.shared.iD
+        self.pasText.text = UesrInformation.shared.password
     }
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         self.view.endEditing(true)

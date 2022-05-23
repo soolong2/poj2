@@ -42,8 +42,8 @@ class SecondViewController: UIViewController,UINavigationControllerDelegate {
     }
     
     @IBAction func touchButton(_ sender: UIButton) {
-        UesrInformation.shared.ID = idText.text
-        UesrInformation.shared.pas = pasText.text
+        UesrInformation.shared.iD = idText.text
+        UesrInformation.shared.password = pasText.text
     }
     
 }
