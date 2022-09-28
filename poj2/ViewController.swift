@@ -11,7 +11,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var idText: UITextField!
     
     @IBOutlet weak var pasText: UITextField!
-    
+    //sadfdsaf
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
